@@ -11,43 +11,36 @@ class NewsPage extends StatefulWidget {
 }
 
 class _NewsPageState extends State<NewsPage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
-      appBar: AppBar(
-
-        title: Text(widget.title),
-      ),
-      body: Center(
-
-        child: Column(
-
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
+      body: Stack(children: [
+      Center(
+        child: Container(
+          width: 892,
+          decoration: BoxDecoration(
+            color: Colors.transparent.withOpacity(0.5),
+              border: Border.all(
+                width: 1,
+              ),
+              borderRadius: BorderRadius.all(Radius.circular(20))),
+          child: Column(children: [
+            ToggleButtons( children: [
+              Container(
+                
+              )
+            ],
+                        borderWidth: 3.0,
+                        borderRadius: BorderRadius.circular(16.0),
+                        isSelected: [],
+                
+                //children: []
+                // ^_^
+                //TODO Import screenshots from phone into boxes of NewsPage
+                )
+          ]),
+          ))
+      ],
       ),
     );
   }
